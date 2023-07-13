@@ -124,7 +124,7 @@ exports.shareFile = async(req, res, next) => {
     if (!user) {
       //sending error
       return next(
-        new ErrorResponse("invalid username", 401)
+        new ErrorResponse("User does not exist", 401)
       );
     }
     try {
@@ -147,7 +147,7 @@ exports.shareFile = async(req, res, next) => {
     
         res.status(200).json({
           success: true,
-          message:"File Uploaded successfully"
+          message:"File Shared successfully"
         });
     
       } catch (error) {
