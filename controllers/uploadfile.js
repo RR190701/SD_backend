@@ -16,7 +16,7 @@ exports.UploadFiles = async(req, res, next) => {
 
     file.mv(uploadPath, (err) => {
       if (err) {
-        return res.send(err);
+        //return res.send(err);
       }
     });
 
