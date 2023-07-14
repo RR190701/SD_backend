@@ -37,7 +37,8 @@ exports.UploadFiles = async(req, res, next) => {
   
       res.status(200).json({
         success: true,
-        message:"File Uploaded successfully"
+        message:"File Uploaded successfully",
+        fileName:filename
       });
   
     } catch (error) {
@@ -89,7 +90,6 @@ exports.viewFile = async(req, res, next) => {
  
    res.status(200).json({
        success:true,
-       fileName : fileName
    })
  
  }
@@ -148,7 +148,7 @@ exports.shareFile = async(req, res, next) => {
     
         res.status(200).json({
           success: true,
-          message:"File Uploaded successfully"
+          message:"File Shared successfully"
         });
     
       } catch (error) {
